@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi historia contigo ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Desliza ← nuestra historia de amor ❤️</h1>
+  </header>
+
+  <div class="carousel" id="carousel">
+    <!-- Agrega aquí un bloque por foto -->
+    <div class="slide">
+      <img src="assets/foto1.webp" alt="Foto 1" loading="lazy">
+      <div class="overlay">Primer momento juntos...</div>
+    </div>
+
+    <div class="slide">
+      <img src="assets/foto2.webp" alt="Foto 2" loading="lazy">
+      <div class="overlay">Y este es mi favorito 💖</div>
+    </div>
+
+    <!-- Copia y pega más bloques aquí para foto3, foto4, etc. -->
+  </div>
+
+  <button class="music-btn" id="musicBtn">♪ Reproducir música</button>
+
+  <audio id="backgroundMusic" loop>
+    <source src="assets/musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <canvas id="particles"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
