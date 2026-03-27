@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  overflow: hidden;
+  height: 100vh;
+  background: #1a0033;
+  color: #fff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  text-align: center;
+  font-size: 1.4em;
+  text-shadow: 0 0 10px #ff69b4;
+}
+
+.carousel {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slide {
+  flex: 0 0 100vw;
+  height: 100vh;
+  position: relative;
+  scroll-snap-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.6em;
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.45);
+  text-shadow: 0 0 15px #ff1493;
+  pointer-events: none;
+}
+
+/* Corazones flotantes de fondo */
+.heart {
+  position: absolute;
+  font-size: 30px;
+  color: #ff69b4;
+  pointer-events: none;
+  animation: floatHeart 12s linear infinite;
+  z-index: 10;
+  text-shadow: 0 0 10px #ff1493;
+}
+
+@keyframes floatHeart {
+  0% { transform: translateY(100vh) rotate(0deg); }
+  100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
+}
+
+/* Botón música */
+.music-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 200;
+  padding: 14px 28px;
+  background: #ff1493;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2em;
+  box-shadow: 0 10px 30px rgba(255, 20, 147, 0.5);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+}
